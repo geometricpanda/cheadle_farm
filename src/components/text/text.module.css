@@ -1,0 +1,29 @@
+.text {
+    font-family: var(--font-family);
+    font-size: var(--font-size-md);
+    line-height: var(--line-height-md);
+    font-weight: var(--font-regular);
+    color: var(--color-black);
+}
+.text--sm {
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-sm);
+}
+.text--lg {
+    font-size: var(--font-size-lg);
+    line-height: var(--line-height-lg);
+}
+.text--xl {
+    font-size: var(--font-size-xl);
+    line-height: var(--line-height-xl);
+}
+.text--color-inherit {
+    color: inherit;
+}
+.text--light {
+    font-weight: var(--font-light);
+}
+
+.text--bold {
+    font-weight: var(--font-bold);
+}
