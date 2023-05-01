@@ -57,7 +57,11 @@
     transition-duration: var(--transition-fast);
     transition-timing-function: ease-out;
 }
-
+.header__link{
+    color: var(--color-white);
+    text-decoration: none;
+}
+.header__link:focus,
 .header__button:focus {
     outline: var(--focus-outline);
     outline-offset: var(--focus-outline-offset);

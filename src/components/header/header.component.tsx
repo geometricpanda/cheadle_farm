@@ -8,6 +8,7 @@ import {HeaderNav} from "./header-nav.component";
 import {useKey} from "react-use";
 import {Logo} from "@/components/logo";
 import {useRouter} from "next/router";
+import Link from "next/link";
 
 export const Header = () => {
     const router = useRouter();
@@ -52,7 +53,9 @@ export const Header = () => {
                     <div className={styles['header__logo']}>
                         <Logo/>
                     </div>
-                    Cheadle Farm
+                    <Link
+                        className={styles['header__link']}
+                        href={'/'}>Cheadle Farm</Link>
                 </div>
                 <div className={styles['header__tel']}>
                     <a
