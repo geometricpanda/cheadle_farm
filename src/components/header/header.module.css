@@ -45,6 +45,9 @@
     margin: 0;
     padding: 0;
     border-radius: 4px;
+    transition-property: box-shadow;
+    transition-duration: var(--transition-fast);
+    transition-timing-function: ease-out;
 }
 .header__button:focus{
     outline: var(--focus-outline);
@@ -108,9 +111,12 @@
     margin: 0;
     padding: 0;
     border-radius: 4px;
+    transition-property: box-shadow;
+    transition-duration: var(--transition-fast);
+    transition-timing-function: ease-out;
 
 }
-.dialog__close:focus-visible{
+.dialog__close:focus{
     outline: var(--focus-outline);
     outline-offset: var(--focus-outline-offset);
     box-shadow: var(--focus-box-shadow);

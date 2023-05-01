@@ -32,6 +32,9 @@
     font-weight: var(--_link-font-weight);
     font-size: var(--font-size-md);
     line-height: var(--line-height-md);
+    transition-property: box-shadow;
+    transition-duration: var(--transition-fast);
+    transition-timing-function: ease-out;
 }
 .nav__link:focus{
     outline: var(--focus-outline);

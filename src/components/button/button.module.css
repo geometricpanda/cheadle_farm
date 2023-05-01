@@ -1,0 +1,24 @@
+.button {
+    display: inline-flex;
+    padding: 10px 16px;
+    background-color: var(--color-ochre);
+    border: 2px solid var(--color-ochre);
+    color: var(--color-black);
+    font-family: var(--font-family);
+    font-weight: var(--font-bold);
+    font-size: var(--font-size-md);
+    line-height: var(--line-height-md);
+    border-radius: 99px;
+    text-decoration: none;
+    flex-direction: row-reverse;
+    gap: 8px;
+    transition-property: box-shadow;
+    transition-duration: var(--transition-fast);
+    transition-timing-function: ease-out;
+}
+
+.button:focus {
+    outline: var(--focus-outline);
+    outline-offset: var(--focus-outline-offset);
+    box-shadow: var(--clay-focus-box-shadow);
+}

@@ -4,6 +4,7 @@
     --color-white:#fff;
     --color-ochre:#FFE6A7;
     --color-black:#333;
+    --color-blue:#0070f3;
     --font-family:'Quicksand', sans-serif;
     --font-regular:400;
     --font-light:300;
@@ -14,12 +15,25 @@
     --font-size-xl:1.5rem;
     --line-height-xl:1.5em;
     --line-height-lg:1.5em;
-    --line-height-md:1.5em;
+    --line-height-md:1.6em;
     --line-height-sm:1.5em;
     --focus-outline:2px solid transparent;
     --focus-outline-offset:2px;
     --focus-box-shadow:0 0 0 2px var(--color-white),
-    0 0 0 4px var(--color-clay);
+    0 0 0 4px var(--color-blue);
     --clay-focus-box-shadow:0 0 0 2px var(--color-clay),
     0 0 0 4px var(--color-ochre);
+    --container-max-width:1200px;
+    --container-gutter:16px;
+    --transition-fast:150ms;
+}
+
+@media (min-width: 48em) {
+    :root {
+        --font-size-xl: 2.75rem;
+    }
+}
+
+body{
+    background-color: #efefef;
 }
