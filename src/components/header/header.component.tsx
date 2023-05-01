@@ -23,7 +23,7 @@ export const Header = () => {
 
     useEffect(() => {
         handleClose()
-    }, [handleClose, router.route])
+    }, [handleClose, router.asPath])
 
     const handleDialogClick: MouseEventHandler = useCallback(({clientX}) => {
         const dialogWidth = dialogRef.current?.getBoundingClientRect().width;
