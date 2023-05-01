@@ -27,11 +27,13 @@ export const getStaticPaths: GetStaticPaths = async () => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const storyblokApi = useStoryblokApi();
     const {data} = await storyblokApi.getStories({});
-    const paths = data.stories.map((story) => ({
-        params: {
-            slug: story.path || story.full_slug
-        }
-    }))
+    const paths = data.stories
+        .filter((story) => story.path !== '/')
+        .map((story) => ({
+            params: {
+                slug: story.path || story.full_slug
+            }
+        }))
     return {
         fallback: false,
         paths
