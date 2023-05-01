@@ -48,11 +48,17 @@ const Home: NextPage<HomeProps> = ({story: initialStory}) => {
             <Head>
                 <title>Cheadle Farm</title>
             </Head>
-            <Header/>
-            <main>
-                <StoryblokComponent blok={story.content}/>
-            </main>
-            <Footer/>
+            <div className={"page"}>
+                <div className={"page__header"}>
+                    <Header/>
+                </div>
+                <main className={"page__body"}>
+                    <StoryblokComponent blok={story.content}/>
+                </main>
+                <div className={"page__footer"}>
+                    <Footer/>
+                </div>
+            </div>
         </>
     );
 }

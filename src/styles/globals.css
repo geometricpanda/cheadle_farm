@@ -1,31 +1,32 @@
 @import "~modern-css-reset";
-:root{
+
+:root {
     --color-clay: #6E5C65;
-    --color-white:#fff;
-    --color-ochre:#FFE6A7;
-    --color-black:#333;
-    --color-blue:#0070f3;
-    --font-family:'Quicksand', sans-serif;
-    --font-regular:400;
-    --font-light:300;
-    --font-bold:600;
-    --font-size-sm:0.875rem;
-    --font-size-md:1rem;
-    --font-size-lg:1.25rem;
-    --font-size-xl:1.5rem;
-    --line-height-xl:1.5em;
-    --line-height-lg:1.5em;
-    --line-height-md:1.6em;
-    --line-height-sm:1.5em;
-    --focus-outline:2px solid transparent;
-    --focus-outline-offset:2px;
-    --focus-box-shadow:0 0 0 2px var(--color-white),
+    --color-white: #fff;
+    --color-ochre: #FFE6A7;
+    --color-black: #333;
+    --color-blue: #0070f3;
+    --font-family: 'Quicksand', sans-serif;
+    --font-regular: 400;
+    --font-light: 300;
+    --font-bold: 600;
+    --font-size-sm: 0.875rem;
+    --font-size-md: 1rem;
+    --font-size-lg: 1.25rem;
+    --font-size-xl: 1.5rem;
+    --line-height-xl: 1.5em;
+    --line-height-lg: 1.5em;
+    --line-height-md: 1.6em;
+    --line-height-sm: 1.5em;
+    --focus-outline: 2px solid transparent;
+    --focus-outline-offset: 2px;
+    --focus-box-shadow: 0 0 0 2px var(--color-white),
     0 0 0 4px var(--color-blue);
-    --clay-focus-box-shadow:0 0 0 2px var(--color-clay),
+    --clay-focus-box-shadow: 0 0 0 2px var(--color-clay),
     0 0 0 4px var(--color-ochre);
-    --container-max-width:1024px;
-    --container-gutter:16px;
-    --transition-fast:150ms;
+    --container-max-width: 1024px;
+    --container-gutter: 16px;
+    --transition-fast: 150ms;
 }
 
 @media (min-width: 48em) {
@@ -34,6 +35,22 @@
     }
 }
 
-body{
+body {
     background-color: #efefef;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.page__header {
+}
+
+.page__body {
+    flex-grow: 1;
+}
+
+.page__footer {
 }
