@@ -3,24 +3,23 @@
     gap: 16px;
     align-items: center;
     background-color: var(--color-white);
-    border-radius:8px ;
-    box-shadow: 0 0 8px rgba(0 0 0 / 25%);
     transition-property: box-shadow;
     transition-duration: var(--transition-fast);
     transition-timing-function: ease-out;
+    text-decoration: none;
+    border-radius: 8px;
 }
-.tile:hover {
-    box-shadow: 0 0 8px rgba(0 0 0 /65%);
-}
+
 .tile:focus{
     outline: var(--focus-outline);
     outline-offset: var(--focus-outline-offset);
     box-shadow: var(--focus-box-shadow);
 }
+
 .tile__img-container{
     aspect-ratio: 1/0.7;
     position: relative;
-    width: 25%
+    width: 30%
 }
 .tile__img{
     object-fit: cover;
@@ -30,6 +29,6 @@
 .tile__text{
     font-size: var(--font-size-md);
     font-family: var(--font-family);
-    color: var(--color-black);
+    color: var(--color-clay);
     font-weight: var(--font-bold);
 }

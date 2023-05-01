@@ -6,6 +6,7 @@ import {faPhone} from "@fortawesome/free-solid-svg-icons/faPhone";
 import {faTimes} from "@fortawesome/free-solid-svg-icons/faTimes";
 import {HeaderNav} from "./header-nav.component";
 import { useKey} from "react-use";
+import {Logo} from "@/components/logo";
 
 export const Header = () => {
 
@@ -42,7 +43,12 @@ export const Header = () => {
                         <Icon icon={faBars}/>
                     </button>
                 </div>
-                <div className={styles['header__text']}>Cheadle Farm</div>
+                <div className={styles['header__text']}>
+                    <div className={styles['header__logo']}>
+                        <Logo/>
+                    </div>
+                    Cheadle Farm
+                </div>
                 <div className={styles['header__tel']}>
                     <a
                         title={'Call Us'}

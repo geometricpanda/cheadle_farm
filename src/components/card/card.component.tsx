@@ -12,6 +12,7 @@ interface CardProps {
     href?: string;
     hrefText?: string;
     flip?: boolean;
+    marginBottom?: boolean;
 }
 
 export const Card: FC<CardProps> = ({
@@ -20,11 +21,13 @@ export const Card: FC<CardProps> = ({
                                         text,
                                         href,
                                         hrefText,
-                                        flip
+                                        flip,
+                                        marginBottom,
                                     }) => (
 
     <div className={clsx({
         [styles['card']]: true,
+        [styles['card--margin-bottom']]: marginBottom,
         [styles['card--flip']]: flip
     })}>
 

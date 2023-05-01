@@ -23,7 +23,7 @@
     0 0 0 4px var(--color-blue);
     --clay-focus-box-shadow:0 0 0 2px var(--color-clay),
     0 0 0 4px var(--color-ochre);
-    --container-max-width:1200px;
+    --container-max-width:1024px;
     --container-gutter:16px;
     --transition-fast:150ms;
 }

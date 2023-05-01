@@ -2,6 +2,10 @@
     background-color: var(--color-clay);
 }
 
+.card--margin-bottom {
+    margin-bottom: 16px;
+}
+
 .card__image-container {
     aspect-ratio: 16/9;
     position: relative;
@@ -26,21 +30,36 @@
     font-size: var(--font-size-md);
 }
 
+.card__content *:has(+ *) {
+    margin-bottom: 0.5rem;
+}
+
 @media (min-width: 48em) {
     .card {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         --_image-container-column: 1 / span 6;
         --_body-column: 8 / span 4;
+        border-radius: 8px;
     }
-    .card--flip{
+
+    .card--flip {
         --_image-container-column: 7 / span 6;
         --_body-column: 2 / span 4;
     }
+
     .card__image-container {
         grid-column: var(--_image-container-column);
         grid-row: 1;
         aspect-ratio: unset;
+    }
+
+    .card__image {
+        border-radius: 8px 0 0 8px;
+    }
+
+    .card--flip .card__image {
+        border-radius: 0 8px 8px 0;
     }
 
     .card__body {
@@ -48,5 +67,10 @@
         justify-content: center;
         grid-row: 1;
         padding-block: 75px;
+    }
+
+
+    .card--margin-bottom {
+        margin-bottom: 24px;
     }
 }
