@@ -1,15 +1,16 @@
 import styles from "./header.module.css"
-import {MouseEventHandler, useCallback, useRef} from "react";
+import {MouseEventHandler, useCallback, useEffect, useRef} from "react";
 import {Icon} from "@/components/icon";
 import {faBars} from "@fortawesome/free-solid-svg-icons/faBars";
 import {faPhone} from "@fortawesome/free-solid-svg-icons/faPhone";
 import {faTimes} from "@fortawesome/free-solid-svg-icons/faTimes";
 import {HeaderNav} from "./header-nav.component";
-import { useKey} from "react-use";
+import {useKey} from "react-use";
 import {Logo} from "@/components/logo";
+import {useRouter} from "next/router";
 
 export const Header = () => {
-
+    const router = useRouter();
     const dialogRef = useRef<HTMLDialogElement>(null);
 
     const handleOpen = useCallback(() => {
@@ -19,6 +20,10 @@ export const Header = () => {
     const handleClose = useCallback(() => {
         dialogRef.current?.close();
     }, []);
+
+    useEffect(() => {
+        handleClose()
+    }, [handleClose, router.route])
 
     const handleDialogClick: MouseEventHandler = useCallback(({clientX}) => {
         const dialogWidth = dialogRef.current?.getBoundingClientRect().width;
